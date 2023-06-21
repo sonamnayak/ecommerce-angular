@@ -1,0 +1,26 @@
+.title,img{margin-block-start:40px}
+.price,.title{margin-block-end:30px}
+.color,select{margin-inline-start:10px}
+.buy,.color,.colors,.img,.options,.quantity{display:flex}
+.product-detail{display:flex;height:calc(100dvh - 60px);padding-block-start:80px}
+.icon,select{padding:6px 10px}
+.img{height:100%;flex:1;justify-content:center}
+img{height:90%;object-fit:cover;object-position:center}
+.product-desc{flex:1;overflow-y:auto;height:100%}
+.title{font-size:42px;font-weight:400}
+.price{font-size:24px}
+.desc,.options{font-size:18px}
+.desc{width:70%;line-height:1.6;margin-block-end:25px}
+.options{width:60%;justify-content:space-between;margin-block-end:30px}
+.options input{appearance:none;display:none}
+.options input:checked+label{outline:black solid 2px;outline-offset:2px}
+.color{width:20px;height:20px;border-radius:50%;border:1px solid #000;cursor:pointer}
+.buy button,.icon{border:1px solid #055063;cursor:pointer}
+select{font-size:16px;cursor:pointer;outline:0}
+.value,option{font-size:18px}
+option{cursor:pointer}
+.quantity{align-items:center;margin-block-end:40px}
+.value{margin-inline:20px}
+.buy{gap:10px}
+.buy button{padding:10px 15px;font-size:16px;background-color:transparent;transition:.3s}
+.buy button:hover{background-color:#055063;color:#fff}

@@ -1,0 +1,11 @@
+<section class="categories">
+    <a *ngFor="let item of categoriesData">
+        <div class="category">
+            <img [src]="item.img" [alt]="item.cat">
+            <div class="info">
+                <h3 class="title">{{item.title}}</h3>
+                <button class="btn" routerLink="/products/{{item.cat}}">SHOP NOW</button>
+            </div>
+        </div>
+    </a>
+</section>

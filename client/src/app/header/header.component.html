@@ -1,0 +1,22 @@
+<header>
+    <a class="logo-container" routerLink="/home">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <div class="logo">ShopSpree</div>
+    </a>
+    <form class="search" (submit)="search()">
+      <input type="text" placeholder="Search here..." [(ngModel)]="searchText" (input)="searchProduct()" name="search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </form>
+    <nav>
+      <ul class="navigation">
+        <a routerLink="/home"><li>Home</li></a>
+        <a routerLink="/register"><li>Register</li></a>
+        <a routerLink="/login"><li>Login</li></a>
+        <a routerLink="/wishlist"><i class="fa-solid fa-heart"></i></a>
+        <a class="cart" routerLink="/cart">
+          <div class="badge">{{totalCartItems}}</div>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+      </ul>
+    </nav>
+</header>

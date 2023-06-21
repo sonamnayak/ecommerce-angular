@@ -1,0 +1,21 @@
+<section class="carousel">
+    <div class="arrow" appDirection="left" (click)="handleClick('left')" >
+        <i class="fa-solid fa-chevron-left"></i>
+    </div>
+    <div class="carousel-wrapper">
+        <div class="slide" *ngFor="let item of sliderData" [ngStyle]="{backgroundColor: item.bg, translate: (slideIndex*-100)+'vw'}" >
+            <div class="img-container">
+                <img [src]="item.img" [alt]="item.title">
+            </div>
+            <div class="info-container">
+                <h1 class="title">{{item.title}}</h1>
+                <div class="desc">{{item.desc}}</div>
+                <div class="desc2">{{item.desc2}}</div>
+                <button class="btn">SHOP NOW</button>
+            </div>
+        </div>
+    </div>
+    <div class="arrow" appDirection="right" (click)="handleClick('right')">
+        <i class="fa-solid fa-chevron-right"></i>
+    </div>
+</section>

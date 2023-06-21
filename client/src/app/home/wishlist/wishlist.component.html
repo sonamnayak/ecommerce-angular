@@ -1,0 +1,28 @@
+<app-header></app-header>
+<h2 class="main-title">Wishlist</h2>
+<section class="products" *ngIf="productsData.length > 0">
+    <ng-container *ngFor="let product of data">
+        <div class="product">
+            <div class="img">
+                <img [src]="product.img" alt={{product.title}}>
+            </div>
+            <div class="icons">
+                <div class="icon" (click)="addToCart(product)">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <a routerLink="/products/product/{{product._id}}" class="link">
+                    <div class="icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </a>
+                <div class="icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </div>
+            <div class="info">
+                <h4 class="product-name">{{product.title}}</h4>
+            <p class="product-price">Price: ${{product.price}}</p>
+            </div>
+        </div>
+    </ng-container>
+</section>

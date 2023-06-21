@@ -1,0 +1,57 @@
+<app-header></app-header>
+<div class="cart">
+    <h1 class="title">CART</h1>
+    <div class="options">
+        <button class="btn" routerLink="/home">Continue Shopping</button>
+        <button class="btn" routerLink="/wishlist">Check Wishlist</button>
+    </div>
+    <div class="cart-wrapper">
+        <div class="products">
+            <ng-container *ngFor="let product of productsData">
+                <div class="product">
+                    <img [src]="product.img" [alt]="product.title">
+                    <div class="desc">
+                        <div class="name">{{product.title}}</div>
+                        <div class="detail"><b>Size:</b> {{product.size}}</div>
+                        <div class="color" [ngStyle]="{backgroundColor: product.color}"></div>
+                        <div class="detail"><b>Quantity:</b> {{product.quantity}}</div>
+                        <div class="detail"><b>Price:</b> ${{product.price}}</div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+        <div class="order">
+            <div class="summary">
+                <h2 class="order-title">Order Summary</h2>
+                <div class="summary-item">
+                    <div class="summary-item-text">Subtotal</div>
+                    <div class="summary-item-price">${{totalAmt}}</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-item-text">Estimated Shipping</div>
+                    <div class="summary-item-price">$5.90</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-item-text">Shipping Discount</div>
+                    <div class="summary-item-price">$-5.90</div>
+                </div>
+                <div class="total">
+                    <div class="summary-item-text">Total</div>
+                    <div class="summary-item-price">${{totalAmt}}</div>
+                </div>
+                <!-- <StripeCheckout
+            name="Lama Shop"
+            image="https://avatars.githubusercontent.com/u/1486366?v=4"
+            billingAddress
+            shippingAddress
+            description={`Your total is $${cart.total}`}
+            amount={cart.total * 100}
+            token={onToken}
+            stripeKey={KEY}
+          >
+            <Button>CHECKOUT NOW</Button>
+          </StripeCheckout> -->
+            </div>
+        </div>
+    </div>
+</div>
