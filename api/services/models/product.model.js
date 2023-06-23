@@ -1,9 +1,7 @@
-const { ObjectId } = require("bson");
 const mongoose = require("mongoose");
 
 const productSchema = mongoose.Schema(
   {
-    _id: { type: ObjectId },
     img: { type: String, required: true, unique: true, index: true },
     cat: { type: String, required: true },
     title: { type: String, required: true },
