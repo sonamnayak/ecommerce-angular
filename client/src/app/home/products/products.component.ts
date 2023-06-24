@@ -13,13 +13,13 @@ import { WishlistService } from 'src/app/services/wishlist.service';
 })
 export class ProductsComponent implements OnInit {
   constructor(private productsDataService: ProductsDataService, private searchDataService: SearchDataService, private activatedRoute: ActivatedRoute, private router: Router, private cartService: CartService, private wishlistService: WishlistService) { }
-  productsData!: ProductsData[]
+  productsData: ProductsData[] = this.productsDataService.productsData
   category!: string | null
   currentRoute!: string | undefined
 
   ngOnInit(): void {
     this.productsDataService.getProducts().subscribe(response => {
-      this.productsData = response
+      if(response.length !== 0) this.productsData = response
       this.currentRoute = this.activatedRoute?.component?.name
       this.activatedRoute.params.subscribe(res => {
         this.productsData = response

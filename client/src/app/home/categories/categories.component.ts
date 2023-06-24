@@ -46,6 +46,8 @@ export class CategoriesComponent {
 
   ngOnInit(): void {
     this.category = this.activatedRoute.snapshot.paramMap.get("cat")
-    this.categoriesService.getCategoriesData().subscribe(res => this.categoriesData = res)
+    this.categoriesService.getCategoriesData().subscribe(res => {
+      if(res.length !== 0) this.categoriesData = res
+    })
   }
 }
