@@ -22,7 +22,7 @@ export class ProductsComponent implements OnInit {
       if(response.length !== 0) this.productsData = response
       this.currentRoute = this.activatedRoute?.component?.name
       this.activatedRoute.params.subscribe(res => {
-        this.productsData = response
+        if(response.length !== 0) this.productsData = response
         this.category = res['cat']
         if (this.category) this.productsData = this.productsData.filter((x: any) => x.cat === this.category)
         else {
