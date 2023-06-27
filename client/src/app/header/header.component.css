@@ -1,16 +1,16 @@
 .logo,.navigation a{text-decoration:none}
-header{height:60px;background-color:#055063;width:100%;display:grid;grid-template-columns:repeat(3,1fr);place-content:center;position:fixed;z-index:10;top:0}
-.logo-container{color:#fff;padding-left:25px;display:flex;align-items:center;gap:6px}
+header{height:60px;background-color:#fff;width:100%;display:grid;grid-template-columns:repeat(3,1fr);place-content:center;position:fixed;z-index:10;top:0}
+.logo-container{color:#050505;padding-left:25px;display:flex;align-items:center;gap:6px}
 .search,nav{align-items:center}
-.logo{color:#fff;font-size:22px;font-weight:500}
-.navigation,.search{font-size:18px;display:flex;color:#fff}
+.logo{color:#050505;font-size:22px;font-weight:500}
+.navigation,.search{font-size:18px;display:flex;color:#050505}
 .search{width:400px;padding:14px;border-radius:6px;gap:14px;margin-top:-2px;margin-inline:auto;flex:1}
-.search input{color:#fff;margin-right:8px;background-color:transparent;border-bottom:1.5px solid #fff;width:100%;padding:6px 8px}
-.search input::placeholder{color:#fff}
-input:-webkit-autofill{-webkit-background-clip:text;-webkit-text-fill-color:white}
+.search input{color:#050505;margin-right:8px;background-color:transparent;border-bottom:1.5px solid #050505;width:100%;padding:6px 8px}
+.search input::placeholder{color:#050505}
+input:-webkit-autofill{-webkit-background-clip:text;-webkit-text-fill-color:#050505}
 .search i{font-size:14px;cursor:pointer}
 nav{display:flex;justify-content:flex-end}
 .navigation{padding-right:10px;align-items:center;justify-content:end}
-.navigation a{margin-right:30px;color:#fff}
+.navigation a{margin-right:30px;color:#050505}
 .cart{position:relative}
 .badge{position:absolute;inset-block-start:-3px;inset-inline-end:-3px;width:12px;height:12px;background:#f2e6d2;border-radius:50%;color:#000;font-weight:700;font-size:8px;display:grid;place-items:center}

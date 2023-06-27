@@ -1,5 +1,5 @@
 <app-header></app-header>
-<h2 class="main-title" *ngIf="currentRoute === 'HomeComponent'">BESTSELLERS</h2>
+<h2 class="main-title" *ngIf="currentRoute === 'HomeComponent' && productsData.length > 0">BESTSELLERS</h2>
 <h2 class="main-title" *ngIf="currentRoute === 'ProductsComponent' && productsData.length > 0">{{category}}</h2>
 <section class="products" *ngIf="productsData.length > 0">
     <ng-container *ngFor="let product of productsData">
@@ -22,9 +22,9 @@
             </div>
             <div class="info">
                 <h4 class="product-name">{{product.title}}</h4>
-            <p class="product-price">Price: ${{product.price}}</p>
+            <p class="product-price">${{product.price}}</p>
             </div>
         </div>
     </ng-container>
 </section>
-<app-not-found *ngIf="productsData.length === 0"></app-not-found>
+<app-not-found *ngIf="productsData.length === 0 && currentRoute != 'HomeComponent'"></app-not-found>

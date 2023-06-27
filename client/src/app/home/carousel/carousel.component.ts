@@ -14,7 +14,7 @@ export class CarouselComponent {
         title: "SUMMER SALE",
         desc: "Get your hands on latest trends!",
         desc2: "Avail 30% OFF", 
-        bg: "#f2e6d2"
+        bg: "#f2e6d2b3"
     },
     {
         id: 2,
