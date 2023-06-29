@@ -16,5 +16,5 @@ mongoose.connect(process.env.MONGO_URL).then(() => console.log("DB connection su
 
 app.listen(port || 3000, (err) => {
     if(err) console.log(err)
-    else console.log(`Server is listening on port http://localhost:${port}`)
+    else console.log(`Server is listening on http://localhost:${port}`)
 })

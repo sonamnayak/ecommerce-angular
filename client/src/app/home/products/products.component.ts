@@ -24,7 +24,7 @@ export class ProductsComponent implements OnInit {
       this.activatedRoute.params.subscribe(res => {
         if(response.length !== 0) this.productsData = response
         this.category = res['cat']
-        if (this.category) this.productsData = this.productsData.filter((x: any) => x.cat === this.category)
+        if (this.category) this.productsData = this.productsData.filter((x: any) => x.cat.includes(this.category?.toLowerCase()))
         else {
           this.productsData = this.productsData.filter((x: any) => x.bestseller === true)
           this.productsData.splice(8, this.productsData.length - 8)

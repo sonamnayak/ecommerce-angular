@@ -17,10 +17,7 @@ export class LoginComponent implements OnInit {
   notValid!: boolean
   constructor(private userService: UserService, private router: Router, private authService: AuthService) { }
   ngOnInit(): void {
-    this.userService.getUsers().subscribe(res => {
-      this.users = res
-
-    })
+    this.userService.getUsers().subscribe(res => this.users = res)
     this.user = new User()
   }
 
